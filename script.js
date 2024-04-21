@@ -1,21 +1,22 @@
-const validation=()=>{
-    var name = document.getElementById('name')
-    var email = document.getElementById('email')
-    var password = document.getElementById('password')
-    var submit = document.getElementById('submit')
+function validation() {
+    var name = document.getElementById('name').value.trim();
+    var email = document.getElementById('email').value.trim();
+    var password = document.getElementById('password').value.trim();
 
-    if(name.value === ""){
-        alert('Please Enter YOur Name')
-        document.loginForm.name.focus()
-        return false
-    }else if(email.value === ""){
-        alert('Please Enter YOur email')
-        document.loginForm.email.focus()
-        return false
-    }else if(name.password === ""){
-        alert('Please Add YOur Password')
-        document.loginForm.password.focus()
-        return false
+    if (name === "") {
+        alert("Please enter your name.");
+        return false;
     }
-    return true
+
+    if (email === "") {
+        alert("Please enter your email.");
+        return false;
+    }
+
+    if (password === "") {
+        alert("Please enter your password.");
+        return false;
+    }
+
+    return true; 
 }
